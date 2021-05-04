@@ -30,7 +30,7 @@ exports.updateUserInfo = (req, res) => {
         if (err) return res.cc(err.message)
 
         if (results.affectedRows !== 1) return res.cc('修改用户信息失败')
-        return res.cc(0, '修改用户信息成功')
+        return res.cc('修改用户信息成功', 0)
     })
 }
 
